@@ -15,16 +15,30 @@ code {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   padding:20px;
-  margin:20px;
+  font-size: 20px;
+  color: black;
 }
-
 a.active {
-  color: orange;
+  color: rgb(187, 34, 34);
+  background-color: antiquewhite;
 }
 
-li {
-  list-style: none;
-  padding:20px;
+
+a:hover {
+  color: rgb(5, 2, 117);
 }
+
+ul {
+  padding: 0;
+}
+
+li a {
+  list-style: none;
+  padding: 10px;
+
+
+}
+img { display: inline-block;}
