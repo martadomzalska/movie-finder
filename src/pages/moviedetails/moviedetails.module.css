@@ -1,0 +1,27 @@
+.image  {
+    width: 200px;
+    height: auto;
+}
+.container {
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.section1 {
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.movieInfo {
+    padding: 10px;
+}
+.additionalInfo {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.additionalInfo_headline {
+    font-size: 20px;
+}
