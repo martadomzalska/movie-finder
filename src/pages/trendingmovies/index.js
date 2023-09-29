@@ -13,7 +13,7 @@ function TrendingMovies() {
       }, []);
     
   // console.log(fetchAPI())
-console.log(movies)
+// console.log(movies)
 
   return (
     <>
