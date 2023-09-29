@@ -23,22 +23,17 @@ async function fetchAPI() {
 
 export default fetchAPI;
 
-// export const getMovieDetails = async movieId => {
-//     try {   const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, {
-//     headers,
-//     })
-//         const data = await response.json()
-//         console.log(data.results)
-//         return data.results
-//     } catch (error) {
-//         console.log(error)
-//     }
-      
-    // .then(response => {
-    //   return response.json();
-    // })
-    // .then(data => {
-    //   console.log('response', data);
-    //   return data;
-    // });
-//};
+export const getMovieDetails = async movieId => {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/${movieId}?language=en-US`,
+      {
+        headers,
+      }
+    );
+    const data = response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
