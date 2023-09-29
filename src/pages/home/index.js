@@ -1,14 +1,10 @@
-import { NavLink } from 'react-router-dom';
 import TrendingMovies from 'pages/trendingmovies';
+import css from './home.module.css';
 
 function Home() {
   return (
     <>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/movies">Movies</NavLink>
-      </nav>
-      <h1>Trending today:</h1>
+      <h1 className={css.headline}>Trending today:</h1>
       <TrendingMovies></TrendingMovies>
     </>
   );
