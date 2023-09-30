@@ -10,7 +10,7 @@ function MovieDetails() {
   const [savedLocation, setSavedLocation]= useState('')
   const location = useLocation();
   // location.state.from = "/movies"
-  console.log(location.state.from)
+  console.log(location.state.query);
   
   console.log('state', savedLocation)
 
@@ -26,18 +26,19 @@ function MovieDetails() {
         genres: data.genres,
         backdrop_path: data.poster_path,
       });
+
       setSavedLocation(location.state.from);
     }
 
     fetchMovieDetails();
-  }, [id]);
+  }, [id, location.state.from]);
 
   const genres =
     movie && movie.genres && movie.genres.map(genre => genre.name).join(', ');
 
   return (
     <div className={css.container}>
-      <Link to={location.state.from}>Go back</Link>
+      <Link to={location.state.from} state={{query: location.state.query}}>Go back</Link>
       <div className={css.section1}>
         {movie &&
           movie.backdrop_path && ( //image
