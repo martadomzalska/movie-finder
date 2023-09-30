@@ -14,7 +14,6 @@ const fetchReviews = async movieId => {
     `https://api.themoviedb.org/3/movie/${movieId}/reviews?language=en-US&page=1`, {headers}
         );
         const data = response.json();
-        console.log(data);
         return data
     } catch (error) {
         console.log(error);
@@ -31,7 +30,6 @@ function Reviews() {
     useEffect(() => {
         async function getMovieReviews() {
             const data = await fetchReviews(id);
-            console.log(data.results);
             setReviews(data.results)
         }
         getMovieReviews()

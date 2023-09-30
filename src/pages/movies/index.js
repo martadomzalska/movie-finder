@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const headers = {
   Authorization:
@@ -18,6 +18,7 @@ async function fetchMovies(query) {
 }
 function Movies() {
   const [queryResults, setQueryResults] = useState(false);
+  const location = useLocation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ function Movies() {
     const data = await fetchMovies(input);
     setQueryResults(data)
   }
-  console.log(queryResults)
+
     return (
       <>
         <h1>Movies</h1>
@@ -36,7 +37,7 @@ function Movies() {
         </form>
        
         <ul>{queryResults ? ( queryResults.map(movie => (
-          <li key={movie.id}><Link to={`${movie.id}`}>{movie.title}</Link></li>
+          <li key={movie.id}><Link to={`${movie.id}`} state={{ from: location }}>{movie.title}</Link></li>
         ))) : (null)}</ul>
         {queryResults.length === 0 && <p>No results found :(</p>}
       </>
