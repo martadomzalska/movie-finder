@@ -8,6 +8,7 @@ function MovieDetails() {
   const { id } = useParams();
   const [movie, setMovie] = useState({}); //''
   const location = useLocation();
+  const backLinkHref = location.state?.from ?? "/movies";
 
   useEffect(() => {
     async function fetchMovieDetails() {
@@ -30,7 +31,7 @@ function MovieDetails() {
 
   return (
     <div className={css.container}>
-      <Link to={location.state.from}>Go back</Link>
+      <Link to={backLinkHref}>Go back</Link>
       <div className={css.section1}>
         {movie &&
           movie.poster_path && ( //image
