@@ -55,14 +55,14 @@ function MovieDetails() {
         <h4 className={css.additionalInfo_headline}>Additional information:</h4>
         <ul>
           <li>
-            <Link to="cast" state={{ id: movie.id, from: backLinkHref}}>
+            <Link to="cast" state={{ id: id, from: backLinkHref}}>
               Cast
             </Link>
           </li>
           <li>
             <Link
               to="reviews"
-              state={{ id: movie.id, from: backLinkHref }}
+              state={{ id: id, from: backLinkHref }}
             >
               Reviews
             </Link>

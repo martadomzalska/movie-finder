@@ -7,7 +7,6 @@ function Cast() {
   const [cast, setCast] = useState('');
   const location = useLocation();
   const { id } = location.state;
-  // location.state.from = '/movies';
   console.log(location.state)
   
 
