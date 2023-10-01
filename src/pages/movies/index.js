@@ -31,6 +31,7 @@ function Movies() {
     e.preventDefault();
     const form = e.currentTarget;
     const input = form.elements.searchQuery.value;
+    
     const data = await fetchMovies(queryParam || input);
     setQueryResults(data);
     setSearchParams({ query: input });
