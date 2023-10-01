@@ -1,26 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import css from './Reviews.module.css'
-
-const headers = {
-  Authorization:
-    'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZjljNGQ1OGI3Nzc5Y2E3ZjU0NzQzOGVjMDY1YTdkMiIsInN1YiI6IjYzYWRlYjM2MWY3NDhiMDBjOGI3NTk3ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yuBGdZBeGbe4GxiKZv6q5aaLChprjgO_x8cJYcfPPzA',
-  accept: 'application/json',
-};
-
-const fetchReviews = async movieId => {
-    try {
-        const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}/reviews?language=en-US&page=1`, {headers}
-        );
-        const data = response.json();
-        return data
-    } catch (error) {
-        console.log(error);
-    }
-  
-};
-
+import { fetchReviews } from 'services/api';
 
 function Reviews() {
     const [reviews, setReviews] = useState('')
