@@ -9,8 +9,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   padding: 20px;
-  /* justify-content: center;
- align-items: center; */
 }
 .author {
   margin: 0;
@@ -21,4 +19,9 @@
   border: 1px solid black;
   background-color: beige;
   max-width: 60%;
+}
+
+.noReviews {
+padding: 10px;
+font-size: 20px;
 }

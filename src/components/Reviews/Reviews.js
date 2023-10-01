@@ -23,7 +23,7 @@ function Reviews() {
                     <li className={css.listElement} key={review.id}><h4 className={css.author}>{review.author}:</h4>
                         <p class={css.review}>{review.content}</p></li>
                 ))
-            ) : (<p>No reviews</p>)}
+            ) : (<p className={css.noReviews}>No reviews</p>)}
       </ul>
   )
 }

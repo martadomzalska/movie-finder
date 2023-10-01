@@ -2,6 +2,7 @@ import { useState, useEffect} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { fetchMovies } from 'services/api';
 import { useSearchParams } from 'react-router-dom';
+import css from './movies.module.css';
 
 function Movies() {
   const [queryResults, setQueryResults] = useState(false); //false
@@ -36,8 +37,8 @@ function Movies() {
 
   return (
     <>
-      <h1>Movies</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className={css.headline}>Movies</h1>
+      <form className={css.form} onSubmit={handleSubmit}>
         <input name="searchQuery"></input>
         <button>Search</button>
       </form>
