@@ -5,7 +5,6 @@ import fetchAPI from 'services/api';
 function TrendingMovies() {
   const [movies, setMovies] = useState([]);
   const location = useLocation();
-  // console.log(location.state)
 
       useEffect(() => {
         fetchAPI()

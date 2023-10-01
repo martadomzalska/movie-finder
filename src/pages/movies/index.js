@@ -9,9 +9,6 @@ function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
   const queryParam = searchParams.get('query');
 
-  console.log("queryResults", queryResults);
-  console.log("queryParam", queryParam);
-
  useEffect(() => {
 
    if (queryParam) {

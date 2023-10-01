@@ -7,7 +7,6 @@ function Cast() {
   const [cast, setCast] = useState('');
   const location = useLocation();
   const { id } = location.state;
-  console.log(location.state)
   
 
   useEffect(() => {
