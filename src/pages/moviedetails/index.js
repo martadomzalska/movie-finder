@@ -6,46 +6,38 @@ import css from './moviedetails.module.css';
 
 function MovieDetails() {
   const { id } = useParams();
-  const [movie, setMovie] = useState('');
-  const [savedLocation, setSavedLocation]= useState('')
+  const [movie, setMovie] = useState({}); //''
   const location = useLocation();
-  // location.state.from = "/movies"
-  console.log(location.state.query);
-  
-  console.log('state', savedLocation)
 
   useEffect(() => {
     async function fetchMovieDetails() {
       const data = await getMovieDetails(id);
-      // console.log(data);
       setMovie({
         id: data.id,
         title: data.title,
         overview: data.overview,
         userScore: data.popularity,
         genres: data.genres,
-        backdrop_path: data.poster_path,
+        poster_path: data.poster_path,
       });
-
-      setSavedLocation(location.state.from);
     }
 
     fetchMovieDetails();
-  }, [id, location.state.from]);
+  }, [id]);
 
   const genres =
     movie && movie.genres && movie.genres.map(genre => genre.name).join(', ');
 
   return (
     <div className={css.container}>
-      <Link to={location.state.from} state={{query: location.state.query}}>Go back</Link>
+      <Link to={location.state.from}>Go back</Link>
       <div className={css.section1}>
         {movie &&
-          movie.backdrop_path && ( //image
+          movie.poster_path && ( //image
             <img
               className={css.image}
-              src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
-              alt="Movie Backdrop"
+              src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+              alt="Movie poster"
               width="100%"
             />
           )}
@@ -62,12 +54,15 @@ function MovieDetails() {
         <h4 className={css.additionalInfo_headline}>Additional information:</h4>
         <ul>
           <li>
-            <Link to="cast" state={{ id: movie.id, from: savedLocation  }}>
+            <Link to="cast" state={{ id: movie.id, from: location.state.from }}>
               Cast
             </Link>
           </li>
           <li>
-            <Link to="reviews" state={{ id: movie.id, from: savedLocation }}>
+            <Link
+              to="reviews"
+              state={{ id: movie.id, from: location.state.from }}
+            >
               Reviews
             </Link>
           </li>
