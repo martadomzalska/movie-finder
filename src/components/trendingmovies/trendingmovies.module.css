@@ -1,31 +1,3 @@
-.form,
-.headline {
-  padding: 10px;
-  color: white;
-}
-.headline {
-  margin: 0;
-  margin-top: 30px;
-}
-
-.container {
-  background-color: black;
-  display: flex;
-
-  align-items: center;
-  flex-direction: column;
-}
-
-.button {
-  width: 70px;
-  height: 30px;
-  padding: 0;
-}
-
-.input {
-  height: 30px;
-}
-
 .movielist {
   display: flex;
   flex-wrap: wrap;
@@ -44,4 +16,12 @@
 
 .movieContainer:hover {
   transform: scale(1.05); /* Lekko przybliża element podczas hover */
+}
+
+.container {
+  background-color: black;
+}
+
+.title {
+  color: white;
 }

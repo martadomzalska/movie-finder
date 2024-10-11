@@ -1,7 +1,7 @@
 .nav_list {
-  background-color: white;
+  background-color: black;
   height: auto;
   display: flex;
   align-items: flex-start;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }

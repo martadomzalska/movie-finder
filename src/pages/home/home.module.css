@@ -1,4 +1,9 @@
+.container {
+  background-color: black;
+  color: white;
+}
 .headline {
-    font-size: 30px;
-    padding: 10px;
+  font-size: 30px;
+  padding: 25px;
+  margin: 0;
 }

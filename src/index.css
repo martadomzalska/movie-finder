@@ -17,18 +17,17 @@ code {
 a {
   display: inline-block;
   text-decoration: none;
-  padding:20px;
+  padding: 20px;
   font-size: 20px;
-  color: black;
+  color: white;
 }
 a.active {
-  color: rgb(187, 34, 34);
-  background-color: antiquewhite;
+  color: black;
+  background-color: rgb(255, 255, 255);
 }
 
-
 a:hover {
-  color: rgb(5, 2, 117);
+  color: rgb(149, 148, 151);
 }
 
 ul {
@@ -38,7 +37,7 @@ ul {
 li a {
   list-style: none;
   padding: 10px;
-
-
 }
-img { display: inline-block;}
+img {
+  display: inline-block;
+}

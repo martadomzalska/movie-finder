@@ -4,7 +4,7 @@ import css from './SharedLayout.module.css';
 
 function SharedLayout() {
   return (
-    <>
+    <div className={css.container}>
       <nav className={css.nav_list}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/movies">Movies</NavLink>
@@ -12,7 +12,7 @@ function SharedLayout() {
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
-    </>
+    </div>
   );
 }
 

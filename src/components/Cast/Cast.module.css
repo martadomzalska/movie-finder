@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   gap: 10px;
   list-style: none;
- justify-content: center;
+  justify-content: center;
 }
 
 .listElement {
