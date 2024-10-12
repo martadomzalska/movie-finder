@@ -1,27 +1,54 @@
-.image  {
-    width: 200px;
-    height: auto;
+.image {
+  max-width: 200px;
+  height: auto;
 }
 .container {
-    /* padding: 10px; */
-    display: flex;
-    flex-direction: column;
+  padding: 30px;
 }
-
+.goBackLink {
+  font-size: 15px;
+  padding: 0;
+}
 .section1 {
-    display: flex;
-    border-bottom: 1px solid black;
-    padding: 10px;
+  display: flex;
+  border: 1px solid white;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  max-width: 800px;
 }
 
 .movieInfo {
-    padding: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.movieOverview {
+  width: 500px;
+  display: flex;
+}
+.movieGenre {
+  margin: 5px;
+  border: 1px solid orange;
+  border-radius: 6px;
+  background-color: orange;
+  display: inline;
 }
 .additionalInfo {
-    border-bottom: 1px solid black;
-    padding: 10px;
+  max-width: 800px;
+  display: flex;
+  padding: 10px;
 }
 
 .additionalInfo_headline {
-    font-size: 20px;
+  font-size: 20px;
+}
+
+.additionalInfoList {
+  list-style: none;
+  display: flex;
+}
+
+.additionalInfoLink:hover {
+  color: orange;
 }
