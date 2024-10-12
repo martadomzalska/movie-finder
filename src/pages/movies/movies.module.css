@@ -1,6 +1,6 @@
 .form,
 .headline {
-  padding: 10px;
+  padding: 20px;
   color: white;
 }
 .headline {
@@ -11,19 +11,22 @@
 .container {
   background-color: black;
   display: flex;
-
   align-items: center;
   flex-direction: column;
 }
 
 .button {
   width: 70px;
-  height: 30px;
+  height: 40px;
+  background-color: white;
   padding: 0;
+  color: grey;
+  cursor: pointer;
 }
 
 .input {
-  height: 30px;
+  height: 35px;
+  margin-right: 5px;
 }
 
 .movielist {
@@ -36,6 +39,7 @@
 }
 
 .movieContainer {
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,5 +47,5 @@
 }
 
 .movieContainer:hover {
-  transform: scale(1.05); /* Lekko przybliża element podczas hover */
+  transform: scale(1.05);
 }
