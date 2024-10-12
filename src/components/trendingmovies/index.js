@@ -19,19 +19,19 @@ function TrendingMovies() {
       <ul className={css.movielist}>
         {movies.map(movie => (
           <li className={css.title} key={movie.id}>
-            <div className={css.movieContainer}>
-              <img
-                alt={movie.original_title}
-                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-              />
-              <Link
-                className={css.title}
-                to={`/movies/${movie.id}`}
-                state={{ from: location }}
-              >
+            <Link
+              className={css.title}
+              to={`/movies/${movie.id}`}
+              state={{ from: location }}
+            >
+              <div className={css.movieContainer}>
+                <img
+                  alt={movie.original_title}
+                  src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                />
                 {movie.title}
-              </Link>
-            </div>
+              </div>
+            </Link>
           </li>
         ))}
       </ul>
