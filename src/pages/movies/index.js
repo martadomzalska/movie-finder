@@ -36,9 +36,13 @@ function Movies() {
 
   return (
     <div className={css.container}>
-      <h1 className={css.headline}>Movies</h1>
+      <h1 className={css.headline}>Movies🎞️</h1>
       <form className={css.form} onSubmit={handleSubmit}>
-        <input className={css.input} name="searchQuery"></input>
+        <input
+          className={css.input}
+          name="searchQuery"
+          placeholder="Search a movie you want"
+        ></input>
         <button className={css.button}>Search</button>
       </form>
 
@@ -46,15 +50,22 @@ function Movies() {
         {queryResults.length > 0
           ? queryResults.map(movie => (
               <li key={movie.id}>
-                <div className={css.movieContainer}>
-                  <img
-                    alt={movie.original_title}
-                    src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                  />
-                  <Link to={`/movies/${movie.id}`} state={{ from: location }}>
+                <Link to={`/movies/${movie.id}`} state={{ from: location }}>
+                  <div className={css.movieContainer}>
+                    {movie.poster_path === null ? (
+                      <img
+                        alt={movie.original_title}
+                        src={'https://placehold.co/300x450/png'}
+                      />
+                    ) : (
+                      <img
+                        alt={movie.original_title}
+                        src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                      />
+                    )}
                     {movie.title}
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </li>
             ))
           : null}
