@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
-const Home = lazy(() => import('pages/home'));
-const Movies = lazy(() => import('pages/movies'));
-const MovieDetails = lazy(() => import('pages/moviedetails'));
+const Home = lazy(() => import('pages/Home/Home'));
+const Movies = lazy(() => import('pages/Movies/Movies'));
+const MovieDetails = lazy(() => import('pages/Moviedetails/MovieDetails'));
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('./Reviews/Reviews'));
 const SharedLayout = lazy(() => import('./SharedLayout/SharedLayout'));
@@ -20,7 +20,7 @@ export const App = () => {
           </Route>
           <Route path="*" element={<Home />} />
         </Route>
-        </Routes>
+      </Routes>
     </div>
   );
 };
