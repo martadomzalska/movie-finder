@@ -1,0 +1,38 @@
+.input {
+  width: 350px;
+  height: 40px;
+  border-radius: 30px;
+  padding-left: 10px;
+  background-color: transparent;
+  position: relative;
+  outline: none;
+  font-size: 16px;
+  border: 2px solid rgba(212, 235, 248, 0.8);
+  color: rgb(212, 235, 248);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #efae5e;
+  box-shadow: 0 0 8px rgba(239, 174, 94, 0.5);
+}
+
+.input::placeholder {
+  color: rgba(212, 235, 248, 0.8);
+  opacity: 0.8;
+}
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  fill: rgba(212, 235, 248, 0.8);
+  transition: fill 0.3s ease;
+}
+.button:hover {
+  fill: rgba(239, 174, 94, 0.5);
+}
