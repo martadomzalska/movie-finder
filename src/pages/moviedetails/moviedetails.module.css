@@ -1,54 +1,85 @@
 .image {
-  max-width: 200px;
+  max-width: 300px;
   height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(53, 48, 41, 0.5);
 }
-.container {
-  padding: 30px;
+.goBackBtn {
+  width: 40px;
+  transition: box-shadow 0.3s ease;
+  border: none;
+  border-radius: 50%;
+  fill: #efae5e;
+  margin: 10px;
 }
-.goBackLink {
-  font-size: 15px;
-  padding: 0;
+.goBackBtn:hover,
+.goBackBtn:focus {
+  box-shadow: 0 0 8px rgba(239, 174, 94, 0.5);
 }
+
 .section1 {
   display: flex;
-  border: 1px solid white;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  min-height: 440px;
   padding: 10px;
-  color: black;
-  background-color: white;
-  max-width: 800px;
 }
 
 .movieInfo {
+  border-radius: 8px;
+  width: 500px;
+  height: 100%;
   padding: 10px;
   display: flex;
   flex-direction: column;
 }
-.movieOverview {
-  width: 500px;
-  display: flex;
-}
+
 .movieGenre {
+  text-align: center;
   margin: 5px;
-  border: 1px solid orange;
-  border-radius: 6px;
-  background-color: orange;
-  display: inline;
+  font-size: 16px;
+  border: 1px solid #efae5e;
+  border-radius: 30px;
+  /* background-color: #efae5e; */
+  padding: 6px;
+  box-shadow: 0 0 8px rgba(239, 174, 94, 0.5);
+  /* display: inline; */
 }
+
 .additionalInfo {
   max-width: 800px;
   display: flex;
+  align-items: center;
   padding: 10px;
 }
 
 .additionalInfo_headline {
   font-size: 20px;
+  margin-right: 10px;
 }
 
 .additionalInfoList {
   list-style: none;
   display: flex;
+  gap: 5px;
 }
-
+.additionalInfoLink {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-optical-sizing: auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  color: #d4ebf8;
+  /* background-color: #eb8b16; */
+  border: 1px solid #efae5e;
+  border-radius: 30px;
+  margin-right: 20px;
+  transition: box-shadow 0.3s ease;
+}
 .additionalInfoLink:hover {
-  color: orange;
+  color: #efae5e;
+  box-shadow: 0 0 8px rgba(239, 174, 94, 0.5);
 }
