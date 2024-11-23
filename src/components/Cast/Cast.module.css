@@ -2,17 +2,31 @@
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   list-style: none;
   justify-content: center;
 }
 
 .listElement {
-  height: auto;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.listElement:hover {
+  transform: scale(1.02);
+}
 
-  padding: 10px;
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 .paragraph {
-  font-size: 15px;
-  width: 200px;
+  font-size: 16px;
+  color: rgb(189, 189, 189);
+  margin: 0;
+  /* width: 200px; */
 }
